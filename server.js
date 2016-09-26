@@ -5,7 +5,8 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
+var articles = {
+     'article-One': {
     title: 'Article one ! Kiran Dora',
     heading: 'Article one',
     date: 'sep 25, 2016',
@@ -18,6 +19,7 @@ var articleOne = {
                     <p>
                         This is my first article. And the technology used to write this webApp is JavaScript and HTML, CSS.This is my third paragraph.
                     </p>`
+}
 };
 
 function createTemplate(data)
@@ -58,8 +60,9 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-   res.send(createTemplate(articleOne));
+app.get('/:articleName', function(req,res){
+    var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/article-two', function(req,res){
