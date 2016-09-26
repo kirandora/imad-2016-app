@@ -20,7 +20,7 @@ var articleOne = {
                     </p>`
 };
 
-function cearteTemplate(data)
+function createTemplate(data)
 {
     var title = data.title;
     var heading = data.heading;
