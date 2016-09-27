@@ -32,7 +32,7 @@ function createTemplate(data)
     var htmlTemplate = `<html>
     <head>
         <title>
-            ${title}
+            This is a new Title.
         </title>
         <link href="/ui/style.css" rel="stylesheet" />
     </head>
