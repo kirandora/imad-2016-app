@@ -17,3 +17,12 @@ img.onclick = function(){
     var interval = setInterval(moveRight,50);
     //img.style.marginLeft = '100px';
 };
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
